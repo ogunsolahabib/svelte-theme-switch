@@ -1,7 +1,9 @@
 {
-  "name": "svelte-themes",
-  "private": true,
-  "version": "0.0.0",
+  "name": "svelte-theme-switch",
+  "main": "dist/index.ts",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.ts",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
