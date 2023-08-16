@@ -1,7 +1,7 @@
 <script>
   import { onDestroy } from "svelte";
   import ThemeScript from "./ThemeScript.svelte";
-  import { themeStore } from "../stores";
+  import { themeStore } from "../stores.js";
 
   const defaultThemes = ["light", "dark"];
   export let forcedTheme;

@@ -1,4 +1,5 @@
 import { writable } from "svelte/store";
-import type { ThemeProviderProps, UseThemeProps } from "./types";
+import type { ThemeProps } from "./types.js";
 
-export const themeStore = writable<UseThemeProps>({ themes: ["light", "dark"], setTheme: (theme) => { } })
+
+export const themeStore = writable<ThemeProps>({ themes: ["light", "dark"], setTheme: _ => { } })
