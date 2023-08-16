@@ -1,5 +1,5 @@
 // Reexport your entry components here
-import { themeStore as themeStoreImport} from "../stores.js";
+import { themeStore as themeStoreImport} from "/src/stores.ts";
 
 import ThemeWrapperImport from '$lib/ThemeWrapper.svelte';
 
