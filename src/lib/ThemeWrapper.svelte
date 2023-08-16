@@ -4,7 +4,8 @@
 	import { themeStore } from '$lib/stores.js';
 
 	const defaultThemes = ['light', 'dark'];
-	export let forcedTheme;
+
+	export let forcedTheme = undefined;
 	export let disableTransitionOnChange = false;
 	export let enableSystem = true;
 	export let enableColorScheme = true;
@@ -12,8 +13,8 @@
 	export let themes = defaultThemes;
 	export let defaultTheme = enableSystem ? 'system' : 'light';
 	export let attribute = 'data-theme';
-	export let value;
-	export let nonce;
+	export let value = undefined;
+	export let nonce = undefined;
 
 	const MEDIA = '(prefers-color-scheme: dark)';
 
