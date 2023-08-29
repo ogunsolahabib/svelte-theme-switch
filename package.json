@@ -1,6 +1,6 @@
 {
 	"name": "svelte-theme-switch",
-	"version": "0.0.14",
+	"version": "0.0.15",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -19,8 +19,7 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
-			}
-		
+		}
 	},
 	"files": [
 		"dist",
