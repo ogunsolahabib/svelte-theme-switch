@@ -1,6 +1,6 @@
 {
 	"name": "svelte-theme-switch",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -15,7 +15,7 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"repository": {
-			"type":"git",
+			"type": "git",
 			"url": "https://github.com/ogunsolahabib/svelte-theme-switch"
 		},
 		"keywords": [
