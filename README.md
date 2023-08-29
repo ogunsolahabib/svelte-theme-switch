@@ -25,6 +25,7 @@ $ yarn add svelte-theme-switch
 <button
     on:click={() =>
       $themeStore.setTheme($themeStore.theme === "light" ? "dark" : "light")}
-    >Switch Theme
+>
+    Switch Theme
 </button>
 ```
