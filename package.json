@@ -13,17 +13,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest",
-		"repository": {
-			"type": "git",
-			"url": "https://github.com/ogunsolahabib/svelte-theme-switch"
-		},
-		"keywords": [
-			"svelte",
-			"svelte themes",
-			"dark mode",
-			"javascript"
-		]
+		"test:unit": "vitest"
 	},
 	"exports": {
 		".": {
