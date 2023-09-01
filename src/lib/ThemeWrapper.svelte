@@ -161,9 +161,10 @@
 	})();
 
 	onDestroy(() => {
+		if (isServer) return;
 		media.removeListener(handleMediaQuery);
 
-		!isServer && window.removeEventListener('storage', handleStorage);
+		window.removeEventListener('storage', handleStorage);
 	});
 </script>
 
