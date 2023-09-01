@@ -51,7 +51,7 @@
 
 		return () => {
 			// Force restyle
-			(() => window.getComputedStyle(document.body))();
+			(() => !isServer && window.getComputedStyle(document.body))();
 
 			// Wait for next tick before removing
 			setTimeout(() => {
@@ -61,6 +61,7 @@
 	};
 
 	const getSystemTheme = (e) => {
+		if (isServer) return;
 		if (!e) e = window.matchMedia(MEDIA);
 		const isDark = e.matches;
 
@@ -127,7 +128,7 @@
 		}
 	};
 
-	const media = window.matchMedia(MEDIA);
+	const media = !isServer ? window.matchMedia(MEDIA) : undefined;
 
 	$: handleStorage = (e) => {
 		if (e.key !== storageKey) {
@@ -151,10 +152,12 @@
 	$: themeStore.update((val) => ({ ...val, ...themeStoreUpdated }));
 	$: (() => {
 		// Intentionally use deprecated listener methods to support iOS & old browsers
-		media.addListener(handleMediaQuery);
-		handleMediaQuery(media);
-		window.addEventListener('storage', handleStorage);
-		applyTheme(forcedTheme ?? theme);
+		if (!isServer) {
+			media.addListener(handleMediaQuery);
+			handleMediaQuery(media);
+			window.addEventListener('storage', handleStorage);
+			applyTheme(forcedTheme ?? theme);
+		}
 	})();
 
 	onDestroy(() => {
