@@ -15,9 +15,22 @@ $ yarn add svelte-theme-switch
 
 ## Usage
 
+### In your `+layout.svelte` file
 ```svelte
 <sript>
-      import { ThemeWrapper, themeStore } from "svelte-theme-switch";
+      import { ThemeWrapper } from "svelte-theme-switch";
+</script>
+
+<ThemeWrapper>
+    <slot/>
+</ThemeWrapper>
+```
+
+
+### In your Component file
+```svelte
+<sript>
+      import { themeStore } from "svelte-theme-switch";
 </script>
 
 <p>Current theme is {$themeStore.theme}</p>
